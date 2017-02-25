@@ -37,7 +37,10 @@
         </ul>
     </main>
     <script type="text/javascript">
-    	new Parallax(document.getElementById('scene'));
+    if (location.protocol != 'https:') {
+        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    }
+    new Parallax(document.getElementById('scene'));
     </script>
 </body>
 
